@@ -1,0 +1,26 @@
+{
+  "name": "ows-atm-cli",
+  "version": "1.0.0",
+  "description": "My atm cli",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ows-ali/ows-atm-cli.git"
+  },
+  "author": "Owais Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ows-ali/ows-atm-cli/issues"
+  },
+  "homepage": "https://github.com/ows-ali/ows-atm-cli#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3"
+  }
+}
