@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 
 type UserType = {
@@ -11,7 +13,9 @@ let user: UserType = {
   pin: 1001,
   balance: 100000,
 };
-
+console.log(
+  "Welcome to ATM built using Typescript. There is a dummy user created named John Doe having balance 100,000. The pin can be found at https://github.com/ows-ali/ows-atm-cli"
+);
 const resp = await inquirer.prompt([
   {
     message: "Please enter pin",

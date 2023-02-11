@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 let user = {
     name: "John Doe",
@@ -11,7 +12,7 @@ const resp = await inquirer.prompt([
         type: "password",
     },
 ]);
-// console.log("resp: ", resp);
+// TODO: Retry on incorrect pin
 if (Number(resp.pin) !== user.pin) {
     console.log("You have entered an incorrect pin");
 }
@@ -32,6 +33,7 @@ else {
                 return resp.selectedType == "Fast Cash";
             },
         },
+        // TODO: amount should be multiple of 500
         {
             name: "amount",
             message: "Please enter amount",
@@ -40,7 +42,6 @@ else {
             },
         },
     ]);
-    //   console.log("selected type: ", resp);
     if (resp.selectedType == "Balance Inquiry") {
         console.log(`Your balance is: ${user.balance}`);
     }
